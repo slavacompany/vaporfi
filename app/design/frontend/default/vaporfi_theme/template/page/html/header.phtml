@@ -1,0 +1,78 @@
+<header>
+
+    <div id="top">
+
+        <div id="topWrapper" class="clearer">
+
+            <h1 id="logo">
+                <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo">VaporFi</a>
+            </h1>
+
+            <div id="topMenuContainer">
+
+                <div id="topMenu">
+                    <div id="topNav" class="clearer">
+                        <div id="topRightDetails">
+                            <div class="phone-top">1-855-93-VAPOR</div>
+                            <div class="promo-top">Promo 1001</div>
+                        </div>
+
+                        <div id="form-search" class="open"></div>
+
+                        <ul id="miniNav" class="clearer">
+                            <li class="first">
+                                <a href="#">Customer Support</a>
+                            </li>
+                            <li>
+                                <a href="#">Store Locator</a>
+                            </li>
+                        </ul>
+
+                        <ul id="clearanceTab">
+                            <li>
+                                <a href="#">What's New</a>
+                            </li>
+                            <li>
+                                <a href="#">Clearance</a>
+                            </li>
+                        </ul>
+
+                        <ul id="accountNav" class="clearer">
+                            <li id="accountmenu" class="first accountmenu">
+                                <a href="#">My Account</a>
+                                <ul class="acctmenu">
+                                    <li>
+                                        <a href="#">Account Login</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="last">
+                                <a href="#" id="top-link-cart">CART !!!</a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <?php echo $this->getChildHtml('topMenu') ?>
+
+                    <div id="mobile-topNav"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="searchBarBackground" class=""></div>
+<!--
+        <div class="quick-access">
+            <?php /*echo $this->getChildHtml('topSearch') */?>
+            <p class="welcome-msg"><?php /*echo $this->getChildHtml('welcome') */?> <?php /*echo $this->getAdditionalHtml() */?></p>
+            <?php /*echo $this->getChildHtml('topLinks') */?>
+            <?php /*echo $this->getChildHtml('store_language') */?>
+        </div>
+-->
+        <?php echo $this->getChildHtml('topContainer'); ?>
+    </div>
+
+</header>
