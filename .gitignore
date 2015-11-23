@@ -1,1 +1,5 @@
+.idea
 /app/etc/local.xml
+/tmp/*
+/var/*
+/dev/*
