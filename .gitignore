@@ -1,0 +1,7 @@
+.idea
+/app/etc/local.xml
+/var/backups/*
+/var/cache/*
+/var/package/*
+/var/session/*
+/media/*
