@@ -42,8 +42,11 @@
         <?php echo $this->getChildHtml('header') ?>
         <div class="main-container col2-right-layout">
             <div class="main">
-                <?php echo $this->getChildHtml('breadcrumbs') ?>
+
                 <div class="col-main">
+                    <div class="breadcrumbs-container">
+                        <?php echo $this->getChildHtml('breadcrumbs') ?>
+                    </div>
                     <?php echo $this->getChildHtml('global_messages') ?>
                     <?php echo $this->getChildHtml('content') ?>
                 </div>
