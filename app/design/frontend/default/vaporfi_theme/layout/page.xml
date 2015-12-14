@@ -10,7 +10,7 @@
         <block type="page/html" name="root" output="toHtml" template="page/1column.phtml">
 
             <block type="page/html_head" name="head" as="head">
-                <action method="addJs"><script>vaporfi/download/jquery-1.10.2.min.js</script></action>-->
+                <action method="addJs"><script>vaporfi/download/jquery-1.11.3.min.js</script></action>-->
                 <action method="addJs"><script>prototype/prototype.js</script></action>
                 <action method="addJs"><script>lib/ccard.js</script></action>
                 <action method="addJs"><script>vaporfi/download/prototype/validation.min.js</script></action>
@@ -41,13 +41,19 @@
 
                 <!---  Download vaporfi CSS Files -->
 
+                <!--  Remove customer css on HOME Page  -->
+                <action method="removeItem">
+                    <type>skin_css</type>
+                    <name>css/download/customer/account/a0d5da07dc1862797d5300537fe636e3.1449859911.css</name>
+                </action>
+                <action method="addCss">
+                    <stylesheet>css/download/home/8e4189035becfa2b64aee988e34750d6.1448861651.css</stylesheet>
+                </action>
 
-                <action method="addCss"><stylesheet>css/download/8e4189035becfa2b64aee988e34750d6.1448861651.css</stylesheet><params>media="all"</params></action>
+                <action method="addCss"><stylesheet>css/download/564d9261a106f8e716d0aa460ea1f2e4.1407171755.css</stylesheet></action>
                 <action method="addCss"><stylesheet>css/download/7c87753dc1aa37ef42ac9ed2b64b05b5.1445877101.css</stylesheet><params>media="print"</params></action>
 
-                <!--<action method="addCss"><stylesheet>css/download/564d9261a106f8e716d0aa460ea1f2e4.1407171755.css</stylesheet></action>-->
                 <!--<action method="addCss"><stylesheet>css/download/fc29227598453e840c507c05dfba5bf4.1442527690.css</stylesheet><params>media="all"</params></action>-->
-                <!--<action method="addCss"><stylesheet>css/download/7c87753dc1aa37ef42ac9ed2b64b05b5.1430350494.css</stylesheet><params>media="print"</params></action>-->
 
                 <!--<action method="addCss"><stylesheet>css/download/vaporfi.head.bottom.css</stylesheet></action>-->
                 <!---  END CSS files -->
