@@ -62,17 +62,20 @@
 
     <?php if($this->getLastPageNum()>1): ?>
     <div class="pages">
-        <strong><?php echo $this->__('Page:') ?></strong>
         <ol>
         <?php if (!$this->isFirstPage()): ?>
-            <li>
-                <a class="previous<?php if(!$this->getAnchorTextForPrevious()): ?> i-previous<?php endif;?>" href="<?php echo $this->getPreviousPageUrl() ?>" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Previous')) ?>">
+            <li class="end">
+                <a class="<?php if(!$this->getAnchorTextForPrevious()): ?>previous<?php endif;?>" href="<?php echo $this->getPreviousPageUrl() ?>" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Previous')) ?>">
                     <?php if(!$this->getAnchorTextForPrevious()): ?>
-                        <img src="<?php echo $this->getSkinUrl('images/pager_arrow_left.gif') ?>" alt="<?php echo Mage::helper('core')->quoteEscape($this->__('Previous')) ?>" class="v-middle" />
+                        <span><?=$this->__('< Previous')?></span>
                     <?php else: ?>
                         <?php echo $this->getAnchorTextForPrevious() ?>
                     <?php endif;?>
                 </a>
+            </li>
+        <?php else: ?>
+            <li class="end">
+                <?=$this->__('< Previous')?>
             </li>
         <?php endif;?>
 
@@ -102,16 +105,21 @@
         <?php endif;?>
 
         <?php if (!$this->isLastPage()): ?>
-            <li>
+            <li class="end">
                 <a class="next<?php if(!$this->getAnchorTextForNext()): ?> i-next<?php endif; ?>" href="<?php echo $this->getNextPageUrl() ?>" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Next')) ?>">
                     <?php if(!$this->getAnchorTextForNext()): ?>
-                        <img src="<?php echo $this->getSkinUrl('images/pager_arrow_right.gif') ?>" alt="<?php echo Mage::helper('core')->quoteEscape($this->__('Next')) ?>" class="v-middle" />
+                        <span><?=$this->__('Next')?></span><?=$this->__(' >')?>
                     <?php else: ?>
                         <?php echo $this->getAnchorTextForNext() ?>
                     <?php endif;?>
                 </a>
             </li>
+        <?php else: ?>
+            <li class="end">
+                <?=$this->__('Next >')?>
+            </li>
         <?php endif;?>
+
         </ol>
 
     </div>

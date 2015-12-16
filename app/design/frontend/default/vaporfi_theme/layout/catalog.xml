@@ -72,6 +72,21 @@ Category default layout
 
     <catalog_category_default translate="label">
         <label>Catalog Category (Non-Anchor)</label>
+
+        <reference name="head">
+            <action method="removeItem">
+                <type>skin_css</type>
+                <name>css/download/home/8e4189035becfa2b64aee988e34750d6.1448861651.css</name>
+            </action>
+            <action method="removeItem">
+                <type>skin_css</type>
+                <name>css/download/customer/account/a0d5da07dc1862797d5300537fe636e3.1449859911.css</name>
+            </action>
+            <action method="addCss">
+                <stylesheet>css/download/product/943add99851c4b4332840ccd0162108e.1450060413.css</stylesheet>
+            </action>
+        </reference>
+
         <reference name="left">
             <block type="catalog/navigation" name="catalog.leftnav" after="currency" template="catalog/navigation/left.phtml"/>
         </reference>
@@ -176,9 +191,23 @@ Product view
         <label>Catalog Product View (Any)</label>
         <!-- Mage_Catalog -->
         <reference name="root">
-            <action method="setTemplate"><template>page/2columns-right.phtml</template></action>
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
         </reference>
+
         <reference name="head">
+
+            <action method="removeItem">
+                <type>skin_css</type>
+                <name>css/download/home/8e4189035becfa2b64aee988e34750d6.1448861651.css</name>
+            </action>
+            <action method="removeItem">
+                <type>skin_css</type>
+                <name>css/download/customer/account/a0d5da07dc1862797d5300537fe636e3.1449859911.css</name>
+            </action>
+            <action method="addCss">
+                <stylesheet>css/download/product/943add99851c4b4332840ccd0162108e.1450060413.css</stylesheet>
+            </action>
+
             <action method="addJs"><script>varien/product.js</script></action>
             <action method="addJs"><script>varien/configurable.js</script></action>
 

@@ -54,7 +54,6 @@ Default layout, loads most of the pages
             </action>
         </reference>
 
-
         <!-- Mage_Customer -->
         <reference name="top.links">
             <action method="addLink" translate="label title" module="customer"><label>My Account</label><url helper="customer/getAccountUrl"/><title>My Account</title><prepare/><urlParams/><position>10</position></action>
